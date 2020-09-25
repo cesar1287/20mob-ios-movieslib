@@ -9,30 +9,33 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    
+    var movie: Movie!
 
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelCategories: UILabel!
+    @IBOutlet weak var labelRating: UILabel!
+    @IBOutlet weak var textViewSummary: UITextView!
+    @IBOutlet weak var imageViewPoster: UIImageView!
+    
     // MARK: - Properties
     var movies: [Movie] = []
     
     // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadMovies()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        imageViewPoster.image = UIImage(named: movie.image ?? "placeholder")
+        labelTitle.text = movie.title
+        labelRating.text = movie.ratingFormatted
+        labelCategories.text = movie.categories
+        textViewSummary.text = movie.summary
     }
 
     //MARK: - Methods
-    private func loadMovies() {
-        guard let jsonURL = Bundle.main.url(forResource: "movies", withExtension: "json") else {return}
-        do {
-            let jsonData = try Data(contentsOf: jsonURL)
-            let jsonDecoder = JSONDecoder()
-            
-            
-            movies = try jsonDecoder.decode([Movie].self, from: jsonData)
-            
-            movies.forEach { print($0.title) }
-        } catch {
-            print(error)
-        }
-    }
 }
 
