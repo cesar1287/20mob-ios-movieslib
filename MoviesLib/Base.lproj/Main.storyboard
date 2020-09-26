@@ -182,7 +182,6 @@
         <!--Filmes-->
         <scene sceneID="Lle-ee-McC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hhh-pv-gt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="oxH-Yd-FZL" customClass="MoviesTableViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4sC-UK-1wE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -208,13 +207,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rho-0u-W1k">
-                                            <rect key="frame" x="94.999999999999986" y="35" width="236.66666666666663" height="15.666666666666664"/>
+                                            <rect key="frame" x="94.999999999999986" y="38.333333333333336" width="236.66666666666663" height="15.666666666666664"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nota" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-Hx-XlF">
-                                            <rect key="frame" x="94.999999999999986" y="75.666666666666671" width="236.66666666666663" height="16"/>
+                                            <rect key="frame" x="94.999999999999986" y="80.333333333333329" width="236.66666666666663" height="16"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <color key="textColor" name="Main"/>
                                             <nil key="highlightedColor"/>
@@ -231,17 +230,17 @@
                                         <constraint firstItem="up1-EP-ju6" firstAttribute="top" secondItem="NM3-dL-GDe" secondAttribute="top" constant="16" id="0Rf-U8-JsK"/>
                                         <constraint firstItem="Sz4-nv-aAc" firstAttribute="leading" secondItem="up1-EP-ju6" secondAttribute="trailing" constant="16" id="1G5-JL-ls7"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="up1-EP-ju6" secondAttribute="bottom" constant="16" id="35L-hr-l8Q"/>
-                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KHT-Hx-XlF" secondAttribute="bottom" constant="16" id="4Wi-aq-8Mw"/>
+                                        <constraint firstAttribute="bottom" secondItem="KHT-Hx-XlF" secondAttribute="bottom" constant="16" id="4Wi-aq-8Mw"/>
                                         <constraint firstItem="KHT-Hx-XlF" firstAttribute="leading" secondItem="rho-0u-W1k" secondAttribute="leading" id="9e7-iV-txV"/>
                                         <constraint firstAttribute="trailing" secondItem="Sz4-nv-aAc" secondAttribute="trailing" constant="16" id="HBL-rS-Hf5"/>
                                         <constraint firstItem="rho-0u-W1k" firstAttribute="leading" secondItem="Sz4-nv-aAc" secondAttribute="leading" id="K7D-3x-ubM"/>
                                         <constraint firstItem="Sz4-nv-aAc" firstAttribute="top" secondItem="up1-EP-ju6" secondAttribute="top" id="Ld3-wI-r8n"/>
                                         <constraint firstItem="KHT-Hx-XlF" firstAttribute="trailing" secondItem="rho-0u-W1k" secondAttribute="trailing" id="QmI-se-Fy8"/>
-                                        <constraint firstItem="rho-0u-W1k" firstAttribute="top" secondItem="Sz4-nv-aAc" secondAttribute="bottom" constant="-1.3333333333333286" id="XXH-hC-2Mm"/>
+                                        <constraint firstItem="rho-0u-W1k" firstAttribute="top" secondItem="Sz4-nv-aAc" secondAttribute="bottom" constant="2" id="XXH-hC-2Mm"/>
                                         <constraint firstItem="up1-EP-ju6" firstAttribute="leading" secondItem="NM3-dL-GDe" secondAttribute="leading" constant="16" id="dZj-Nb-qfN"/>
                                         <constraint firstItem="rho-0u-W1k" firstAttribute="trailing" secondItem="Sz4-nv-aAc" secondAttribute="trailing" id="qlg-26-OG7"/>
                                         <constraint firstItem="rho-0u-W1k" firstAttribute="leading" secondItem="up1-EP-ju6" secondAttribute="trailing" constant="16" id="rAI-qw-vHt"/>
-                                        <constraint firstItem="KHT-Hx-XlF" firstAttribute="top" secondItem="rho-0u-W1k" secondAttribute="bottom" constant="25" id="zVp-eR-E52"/>
+                                        <constraint firstItem="KHT-Hx-XlF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rho-0u-W1k" secondAttribute="bottom" constant="25" id="zVp-eR-E52"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -262,6 +261,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="zeL-cQ-VLc"/>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhh-pv-gt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="600.79999999999995" y="111.57635467980296"/>
         </scene>

@@ -17,6 +17,7 @@
 		155F9FF9251AB2F700F144FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155F9FF7251AB2F700F144FB /* Main.storyboard */; };
 		155F9FFB251AB2FB00F144FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155F9FFA251AB2FB00F144FB /* Assets.xcassets */; };
 		155F9FFE251AB2FB00F144FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155F9FFC251AB2FB00F144FB /* LaunchScreen.storyboard */; };
+		15DB4DAE251F639A00F90B4A /* MoviesLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15DB4DAC251F639A00F90B4A /* MoviesLib.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		155F9FFA251AB2FB00F144FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		155F9FFD251AB2FB00F144FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		155F9FFF251AB2FB00F144FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15DB4DAD251F639A00F90B4A /* MoviesLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesLib.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				1534214D251D543400E41F1E /* movies.json */,
+				15DB4DAC251F639A00F90B4A /* MoviesLib.xcdatamodeld */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -186,7 +189,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Cesar Nascimento";
 				TargetAttributes = {
 					155F9FED251AB2F700F144FB = {
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15DB4DAE251F639A00F90B4A /* MoviesLib.xcdatamodeld in Sources */,
 				15342165251D7A9D00E41F1E /* MovieTableViewCell.swift in Sources */,
 				15342161251D717100E41F1E /* MoviesTableViewController.swift in Sources */,
 				15342169251D7D7F00E41F1E /* Movie+RatingFormatted.swift in Sources */,
@@ -288,6 +292,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -348,6 +353,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -432,6 +438,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		15DB4DAC251F639A00F90B4A /* MoviesLib.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15DB4DAD251F639A00F90B4A /* MoviesLib.xcdatamodel */,
+			);
+			currentVersion = 15DB4DAD251F639A00F90B4A /* MoviesLib.xcdatamodel */;
+			path = MoviesLib.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 155F9FE6251AB2F700F144FB /* Project object */;
 }
