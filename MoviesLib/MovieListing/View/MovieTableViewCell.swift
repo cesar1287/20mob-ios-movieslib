@@ -21,7 +21,7 @@ class MovieTableViewCell: UITableViewCell {
     
     func configure(with movie: Movie) {
         if let image = movie.image {
-            imageViewPoster.image = UIImage(named: image)
+//            imageViewPoster.image = UIImage(named: image)
         } else {
             imageViewPoster.image = nil
         }

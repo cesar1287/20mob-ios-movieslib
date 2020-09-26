@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class MovieViewController: UIViewController {
     
     var movie: Movie!
 
@@ -29,10 +29,9 @@ final class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        imageViewPoster.image = UIImage(named: movie.image ?? "placeholder")
         labelTitle.text = movie.title
         labelRating.text = movie.ratingFormatted
-        labelCategories.text = movie.categories
+//        labelCategories.text = movie.categories
         textViewSummary.text = movie.summary
     }
 

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,6 +339,9 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="26" id="nCc-iE-si9"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <segue destination="xyg-DJ-eBQ" kind="show" id="1Ep-Zc-D28"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyy-Fx-ea5">
                                                                 <rect key="frame" x="35" y="0.0" width="300" height="23.666666666666668"/>
@@ -434,7 +437,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro de Filmes" largeTitleDisplayMode="never" id="eLn-Gj-Bry">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="Av7-Zt-6XY"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="Av7-Zt-6XY"/>
                     </navigationItem>
                     <connections>
                         <outlet property="buttonSave" destination="f1B-4t-j1a" id="T01-fk-pdC"/>
@@ -452,20 +455,46 @@
             </objects>
             <point key="canvasLocation" x="1512.8" y="-166.25615763546799"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="aab-RX-4Nw">
+        <!--Categorias-->
+        <scene sceneID="5vK-ow-0hj">
             <objects>
-                <viewController id="adr-YW-zrt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="q1Y-D9-zVk">
+                <tableViewController id="xyg-DJ-eBQ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kuv-KM-lQF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="blL-S1-tj0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Muh-Rb-KQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="dHb-iz-hO7" style="IBUITableViewCellStyleDefault" id="E0m-TD-DAL">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E0m-TD-DAL" id="U1j-gr-juc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dHb-iz-hO7">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xyg-DJ-eBQ" id="mVl-pG-gEJ"/>
+                            <outlet property="delegate" destination="xyg-DJ-eBQ" id="o59-53-phq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Categorias" id="lQZ-0h-hNI">
+                        <barButtonItem key="backBarButtonItem" title=" " id="9rj-zn-3da"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HvF-KM-BJs"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2s-OG-gsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2318" y="-166"/>
+            <point key="canvasLocation" x="2284" y="-166"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
