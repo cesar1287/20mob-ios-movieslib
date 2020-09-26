@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MovieViewController.swift
 //  MoviesLib
 //
-//  Created by Cesar Nascimento on 22/09/20.
+//  Created by Cesar Nascimento on 26/09/20.
 //  Copyright © 2020 Cesar Nascimento. All rights reserved.
 //
 
@@ -15,11 +15,9 @@ final class MovieViewController: UIViewController {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelCategories: UILabel!
     @IBOutlet weak var labelRating: UILabel!
+    @IBOutlet weak var labelDuration: UILabel!
     @IBOutlet weak var textViewSummary: UITextView!
     @IBOutlet weak var imageViewPoster: UIImageView!
-    
-    // MARK: - Properties
-    var movies: [Movie] = []
     
     // MARK: - Super Methods
     override func viewDidLoad() {
@@ -28,13 +26,15 @@ final class MovieViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         labelTitle.text = movie.title
         labelRating.text = movie.ratingFormatted
-//        labelCategories.text = movie.categories
+        labelDuration.text = movie.duration
         textViewSummary.text = movie.summary
     }
-
-    //MARK: - Methods
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? MovieFormViewController {
+            vc.movie = movie
+        }
+    }
 }
-

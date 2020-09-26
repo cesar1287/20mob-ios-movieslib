@@ -176,6 +176,7 @@
                     <connections>
                         <outlet property="imageViewPoster" destination="7jO-q2-nxC" id="kuo-Tx-6hU"/>
                         <outlet property="labelCategories" destination="XP2-J7-KSf" id="zLI-58-7ki"/>
+                        <outlet property="labelDuration" destination="vyh-g5-98t" id="j6a-F0-25o"/>
                         <outlet property="labelRating" destination="7wY-Ci-cNg" id="F5v-F6-X0h"/>
                         <outlet property="labelTitle" destination="xIi-0o-e6q" id="IDq-mK-FCE"/>
                         <outlet property="textViewSummary" destination="jtw-eg-pyu" id="8De-vp-GBL"/>
@@ -448,6 +449,7 @@
                         <outlet property="textFieldMovieDuration" destination="A9q-rJ-A4p" id="bfK-5e-qLt"/>
                         <outlet property="textFieldMovieNote" destination="HZq-wV-OSN" id="A9G-82-Eh2"/>
                         <outlet property="textFieldMovieTitle" destination="Tk9-7c-6fZ" id="Qfq-Kb-2YL"/>
+                        <outlet property="textFieldRating" destination="HZq-wV-OSN" id="Txt-ev-YQf"/>
                         <outlet property="textViewSummary" destination="aSZ-EA-G7K" id="53D-Us-MTA"/>
                     </connections>
                 </viewController>

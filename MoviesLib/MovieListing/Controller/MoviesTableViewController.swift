@@ -44,7 +44,7 @@ class MoviesTableViewController: UITableViewController {
 
     // MARK: - Methods
     private func loadMovies() {
-        try ? fetchedResultsController.performFetch()
+        try? fetchedResultsController.performFetch()
     }
     
     // MARK: - Table view data source
@@ -68,8 +68,16 @@ class MoviesTableViewController: UITableViewController {
         cell.configure(with: movie)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let movie = fetchedResultsController.object(at: indexPath)
+            context.delete(movie)
+            try? context.save()
+        }
+    }
 
-}
+    }
 
 extension MoviesTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
