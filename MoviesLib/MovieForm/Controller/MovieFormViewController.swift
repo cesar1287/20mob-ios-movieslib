@@ -43,6 +43,56 @@ final class MovieFormViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func selectImage(_ sender: UIButton) {
+        let alert = UIAlertController(
+            title: "Selecionar pôster",
+            message: "De onde você deseja escolher o pôster?",
+            preferredStyle: .actionSheet
+        )
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) == true {
+            let cameraAction = UIAlertAction(
+                title: "Câmera",
+                style: .default) { (_) in
+                self.selectPictureFrom(.camera)
+                }
+            alert.addAction(cameraAction)
+        }
+        
+        
+        let libraryAction = UIAlertAction(
+            title: "Biblioteca de fotos",
+            style: .default) { (_) in
+            self.selectPictureFrom(.photoLibrary)
+            }
+        
+        alert.addAction(libraryAction)
+        
+        let photosAction = UIAlertAction(
+            title: "Álbum de fotos",
+            style: .default) { (_) in
+            self.selectPictureFrom(.savedPhotosAlbum)
+            }
+        alert.addAction(photosAction)
+        
+        let cancelAction = UIAlertAction(
+            title: "Cancelar",
+            style: .cancel,
+            handler: nil
+        )
+        alert.addAction(cancelAction)
+        
+        present(
+            alert,
+            animated: true,
+            completion: nil
+        )
+    }
+    
+    private func selectPictureFrom(_ sourceType: UIImagePickerController.SourceType) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = sourceType
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     @IBAction func save(_ sender: UIButton) {
@@ -70,7 +120,7 @@ final class MovieFormViewController: UIViewController {
         if let movie = movie {
             title = "Edição de filme"
             textFieldMovieTitle.text = movie.title
-            textFieldRating.text = "\(movie.rating ?? 0)"
+            textFieldRating.text = "\(movie.rating)"
             textFieldMovieDuration.text = movie.duration
             textViewSummary.text = movie.summary
             buttonSave.setTitle("Alterar", for: .normal)
@@ -92,4 +142,17 @@ final class MovieFormViewController: UIViewController {
         scrollView.contentInset.bottom = 0
         scrollView.verticalScrollIndicatorInsets.bottom = 0
     }
+}
+
+extension MovieFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[.originalImage] as? UIImage {
+            imageViewPoster.image = image
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
