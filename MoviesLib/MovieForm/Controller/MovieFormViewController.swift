@@ -23,6 +23,15 @@ final class MovieFormViewController: UIViewController {
     
     // MARK: - Properties
     var movie: Movie?
+    var selectedCategories: Set<Category> = [] {
+        didSet {
+            if selectedCategories.count > 0 {
+                labelMovieCategories.text = selectedCategories.compactMap({ $0.name }).sorted().joined(separator: " | ")
+            } else {
+                labelMovieCategories.text = "Categorias"
+            }
+        }
+    }
     
     // MARK: - Super Methods
     override func viewDidLoad() {
@@ -105,6 +114,7 @@ final class MovieFormViewController: UIViewController {
         let rating = Double(textFieldRating.text!) ?? 0
         movie?.rating = rating
         movie?.image = imageViewPoster.image?.jpegData(compressionQuality: 0.9)
+        movie?.categories = selectedCategories as NSSet?
         
         view.endEditing(true)
         do {
@@ -123,7 +133,13 @@ final class MovieFormViewController: UIViewController {
             textFieldRating.text = "\(movie.rating)"
             textFieldMovieDuration.text = movie.duration
             textViewSummary.text = movie.summary
+            imageViewPoster.image = movie.poster
             buttonSave.setTitle("Alterar", for: .normal)
+            
+            if let categories = movie.categories as? Set<Category>, categories.count > 0{
+                selectedCategories = categories
+            }
+            
             if let data = movie.image {
                 imageViewPoster.image = UIImage(data: data)
             }
@@ -142,6 +158,13 @@ final class MovieFormViewController: UIViewController {
         scrollView.contentInset.bottom = 0
         scrollView.verticalScrollIndicatorInsets.bottom = 0
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? CategoriesTableViewController {
+            vc.delegate = self
+            vc.selectedCategories = selectedCategories
+        }
+    }
 }
 
 extension MovieFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -155,4 +178,11 @@ extension MovieFormViewController: UIImagePickerControllerDelegate, UINavigation
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension MovieFormViewController: CategoriesDelegate {
+    
+    func setSelectedCategories(_ categories: Set<Category>) {
+        selectedCategories = categories
+    }
 }

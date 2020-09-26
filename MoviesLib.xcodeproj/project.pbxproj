@@ -18,6 +18,7 @@
 		15DB4DB3251F83CB00F90B4A /* MovieFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB4DB2251F83CB00F90B4A /* MovieFormViewController.swift */; };
 		15DB4DBE251F92C800F90B4A /* UiViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB4DBD251F92C800F90B4A /* UiViewController+Context.swift */; };
 		15DB4DC3251F9D9500F90B4A /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB4DC2251F9D9500F90B4A /* MovieViewController.swift */; };
+		15DB4DC8251FB14200F90B4A /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB4DC7251FB14200F90B4A /* CategoriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		15DB4DB2251F83CB00F90B4A /* MovieFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFormViewController.swift; sourceTree = "<group>"; };
 		15DB4DBD251F92C800F90B4A /* UiViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Context.swift"; sourceTree = "<group>"; };
 		15DB4DC2251F9D9500F90B4A /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		15DB4DC7251FB14200F90B4A /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		155F9FF0251AB2F700F144FB /* MoviesLib */ = {
 			isa = PBXGroup;
 			children = (
+				15DB4DC5251FB11700F90B4A /* Categories */,
 				15DB4DB0251F839900F90B4A /* MovieForm */,
 				15342167251D7D2A00E41F1E /* Extensions */,
 				15342152251D554F00E41F1E /* Files */,
@@ -166,6 +169,22 @@
 			isa = PBXGroup;
 			children = (
 				15DB4DB2251F83CB00F90B4A /* MovieFormViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15DB4DC5251FB11700F90B4A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				15DB4DC6251FB12200F90B4A /* Controller */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		15DB4DC6251FB12200F90B4A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15DB4DC7251FB14200F90B4A /* CategoriesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +266,7 @@
 				15DB4DC3251F9D9500F90B4A /* MovieViewController.swift in Sources */,
 				15DB4DB3251F83CB00F90B4A /* MovieFormViewController.swift in Sources */,
 				15342169251D7D7F00E41F1E /* Movie+RatingFormatted.swift in Sources */,
+				15DB4DC8251FB14200F90B4A /* CategoriesTableViewController.swift in Sources */,
 				15DB4DBE251F92C800F90B4A /* UiViewController+Context.swift in Sources */,
 				155F9FF2251AB2F700F144FB /* AppDelegate.swift in Sources */,
 			);

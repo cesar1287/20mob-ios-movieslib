@@ -460,13 +460,13 @@
         <!--Categorias-->
         <scene sceneID="5vK-ow-0hj">
             <objects>
-                <tableViewController id="xyg-DJ-eBQ" sceneMemberID="viewController">
+                <tableViewController id="xyg-DJ-eBQ" customClass="CategoriesTableViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kuv-KM-lQF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="dHb-iz-hO7" style="IBUITableViewCellStyleDefault" id="E0m-TD-DAL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="dHb-iz-hO7" style="IBUITableViewCellStyleDefault" id="E0m-TD-DAL">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E0m-TD-DAL" id="U1j-gr-juc">
@@ -491,7 +491,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Categorias" id="lQZ-0h-hNI">
                         <barButtonItem key="backBarButtonItem" title=" " id="9rj-zn-3da"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HvF-KM-BJs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HvF-KM-BJs">
+                            <connections>
+                                <action selector="add:" destination="xyg-DJ-eBQ" id="Isg-nL-ZYd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2s-OG-gsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -500,7 +504,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wbo-zr-Kyd"/>
+        <segue reference="9po-10-9Tg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gradient" width="600" height="120"/>

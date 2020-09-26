@@ -20,8 +20,8 @@ class MovieTableViewCell: UITableViewCell {
     //MARK: - Methods
     
     func configure(with movie: Movie) {
-        if let image = movie.image {
-//            imageViewPoster.image = UIImage(named: image)
+        if let image = movie.poster {
+            imageViewPoster.image = image
         } else {
             imageViewPoster.image = nil
         }
