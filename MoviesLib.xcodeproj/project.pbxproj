@@ -19,6 +19,7 @@
 		15DB4DBE251F92C800F90B4A /* UiViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB4DBD251F92C800F90B4A /* UiViewController+Context.swift */; };
 		15DB4DC3251F9D9500F90B4A /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB4DC2251F9D9500F90B4A /* MovieViewController.swift */; };
 		15DB4DC8251FB14200F90B4A /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB4DC7251FB14200F90B4A /* CategoriesTableViewController.swift */; };
+		15DB4DD2251FCAC400F90B4A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB4DD1251FCAC400F90B4A /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		15DB4DBD251F92C800F90B4A /* UiViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Context.swift"; sourceTree = "<group>"; };
 		15DB4DC2251F9D9500F90B4A /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		15DB4DC7251FB14200F90B4A /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		15DB4DD1251FCAC400F90B4A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		155F9FF0251AB2F700F144FB /* MoviesLib */ = {
 			isa = PBXGroup;
 			children = (
+				15DB4DCA251FCA3A00F90B4A /* Map */,
 				15DB4DC5251FB11700F90B4A /* Categories */,
 				15DB4DB0251F839900F90B4A /* MovieForm */,
 				15342167251D7D2A00E41F1E /* Extensions */,
@@ -185,6 +188,22 @@
 			isa = PBXGroup;
 			children = (
 				15DB4DC7251FB14200F90B4A /* CategoriesTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15DB4DCA251FCA3A00F90B4A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				15DB4DCC251FCA5F00F90B4A /* Controller */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		15DB4DCC251FCA5F00F90B4A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15DB4DD1251FCAC400F90B4A /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,6 +282,7 @@
 				15DB4DAE251F639A00F90B4A /* MoviesLib.xcdatamodeld in Sources */,
 				15342165251D7A9D00E41F1E /* MovieTableViewCell.swift in Sources */,
 				15342161251D717100E41F1E /* MoviesTableViewController.swift in Sources */,
+				15DB4DD2251FCAC400F90B4A /* MapViewController.swift in Sources */,
 				15DB4DC3251F9D9500F90B4A /* MovieViewController.swift in Sources */,
 				15DB4DB3251F83CB00F90B4A /* MovieFormViewController.swift in Sources */,
 				15342169251D7D7F00E41F1E /* Movie+RatingFormatted.swift in Sources */,
